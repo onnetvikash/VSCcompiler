@@ -1,0 +1,15 @@
+# view AndroidManifest.xml #generated:21
+-keep class com.dropbox.client2.android.AuthActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:30
+-keep class com.example.vsccompiler.GCMIntentService { <init>(...); }
+
+# view AndroidManifest.xml #generated:14
+-keep class com.example.vsccompiler.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:42
+-keep class com.example.vsccompiler.RegisterActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:31
+-keep class com.google.android.gcm.GCMBroadcastReceiver { <init>(...); }
+
