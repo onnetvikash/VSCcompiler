@@ -1,0 +1,42 @@
+Êþº¾   2   *com/example/vsccompiler/CloudEndpointUtils  java/lang/Object LOCAL_ANDROID_RUN Z 
+ConstantValue     LOCAL_APP_ENGINE_SERVER_URL Ljava/lang/String;  http://localhost:8888/ 'LOCAL_APP_ENGINE_SERVER_URL_FOR_ANDROID  http://10.0.2.2:8888 <init> ()V Code
+     LineNumberTable LocalVariableTable this ,Lcom/example/vsccompiler/CloudEndpointUtils; 
+updateBuilder ’(Lcom/google/api/client/googleapis/services/AbstractGoogleClient$Builder;)Lcom/google/api/client/googleapis/services/AbstractGoogleClient$Builder; 	Signature T<B:Lcom/google/api/client/googleapis/services/AbstractGoogleClient$Builder;>(TB;)TB;
+     Fcom/google/api/client/googleapis/services/AbstractGoogleClient$Builder ! " 
+getRootUrl ()Ljava/lang/String; $ https:
+ & ( ' java/lang/String ) * 
+startsWith (Ljava/lang/String;)Z , ,com/example/vsccompiler/CloudEndpointUtils$1
+ + .  / (Z)V
+  1 2 3 !setGoogleClientRequestInitializer ”(Lcom/google/api/client/googleapis/services/GoogleClientRequestInitializer;)Lcom/google/api/client/googleapis/services/AbstractGoogleClient$Builder; builder HLcom/google/api/client/googleapis/services/AbstractGoogleClient$Builder; 
+enableGZip LocalVariableTypeTable TB; 
+logAndShow =(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V
+ < > = android/util/Log ? @ e '(Ljava/lang/String;Ljava/lang/String;)I
+  B C D 	showError +(Landroid/app/Activity;Ljava/lang/String;)V activity Landroid/app/Activity; tag message @(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/Throwable;)V K Error
+ < M ? N <(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+ P R Q java/lang/Throwable S " 
+getMessage U Acom/google/api/client/googleapis/json/GoogleJsonResponseException
+ T W X Y 
+getDetails 9()Lcom/google/api/client/googleapis/json/GoogleJsonError;
+ [ R \ 5com/google/api/client/googleapis/json/GoogleJsonError t Ljava/lang/Throwable; details 7Lcom/google/api/client/googleapis/json/GoogleJsonError; 
+StackMapTable c java/lang/StringBuilder e 	[Error ] 
+ b g  h (Ljava/lang/String;)V
+ b j k l append -(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ b n o " toString q ,com/example/vsccompiler/CloudEndpointUtils$2
+ p s  D
+ u w v android/app/Activity x y 
+runOnUiThread (Ljava/lang/Runnable;)V errorMessage 
+SourceFile CloudEndpointUtils.java InnerClasses  >com/google/api/client/googleapis/services/AbstractGoogleClient Builder !                	 
+        
+ 
+               /     *· ±                        	            g     *¶ #¶ %<*» +Y· -¶ 0W*°           D 
+ F  O         4 5   
+  6   7        4 8   	 9 :     R     +,¸ ;W*,¸ A±           ]  ^  _          E F      G 
+     H 
+  	 9 I     ²     .+J,¸ LW,¶ ON,Á T™ ,À T¶ V:Æ 	¶ ZN*-¸ A±       * 
+   m  n 
+ q  r  s  r  t " u ( x - y    4    . E F     . G 
+    . ] ^  
+ ! H 
+    _ `  a    ü ( & 	 C D     ƒ     (+Ç J§ » bYd· f+¶ i¶ mM*» pY*,· r¶ t±           „  …  „  † ' Œ         ( E F     ( H 
+    z 
+  a    	O &  {    | }     +       p        ~ €	
