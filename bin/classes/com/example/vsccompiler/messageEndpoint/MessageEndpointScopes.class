@@ -1,0 +1,10 @@
+Êþº¾   2 ,  =com/example/vsccompiler/messageEndpoint/MessageEndpointScopes  java/lang/Object USERINFO_EMAIL Ljava/lang/String; 
+ConstantValue 	 .https://www.googleapis.com/auth/userinfo.email all ()Ljava/util/Set; 	Signature %()Ljava/util/Set<Ljava/lang/String;>; Code  java/util/HashSet
+     <init> ()V    
+java/util/Set   add (Ljava/lang/Object;)Z
+    java/util/Collections    unmodifiableSet  (Ljava/util/Set;)Ljava/util/Set; LineNumberTable LocalVariableTable set Ljava/util/Set; LocalVariableTypeTable #Ljava/util/Set<Ljava/lang/String;>;
+   this ?Lcom/example/vsccompiler/messageEndpoint/MessageEndpointScopes; 
+SourceFile MessageEndpointScopes.java !                	 
+       
+    Z     » Y· K*¹  W*¸ °    !       %  &  ' "       # $   %       # &          3     *· '±    !   
+    *  + "        ( )    *    +
