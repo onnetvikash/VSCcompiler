@@ -1,0 +1,32 @@
+Êþº¾   2 _  Ncom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint$InsertDeviceInfo  Dcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest 	REST_PATH Ljava/lang/String; 
+ConstantValue 	 
+deviceinfo this$0 ?Lcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint; <init> (Lcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint;Lcom/example/vsccompiler/deviceinfoendpoint/model/DeviceInfo;)V Code	   
+   POST  ;com/example/vsccompiler/deviceinfoendpoint/model/DeviceInfo
+     ‰(Lcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Class;)V LineNumberTable LocalVariableTable this PLcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint$InsertDeviceInfo; content =Lcom/example/vsccompiler/deviceinfoendpoint/model/DeviceInfo; setAlt d(Ljava/lang/String;)Lcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint$InsertDeviceInfo;
+  !  " Z(Ljava/lang/String;)Lcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest; alt 	setFields
+  & $ " fields setKey
+  * ( " key 
+setOauthToken
+  . , " 
+oauthToken setPrettyPrint e(Ljava/lang/Boolean;)Lcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint$InsertDeviceInfo;
+  3 0 4 [(Ljava/lang/Boolean;)Lcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest; prettyPrint Ljava/lang/Boolean; setQuotaUser
+  9 7 " 	quotaUser 	setUserIp
+  = ; " userIp set v(Ljava/lang/String;Ljava/lang/Object;)Lcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint$InsertDeviceInfo;
+  B ? C l(Ljava/lang/String;Ljava/lang/Object;)Lcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest; 
+parameterName value Ljava/lang/Object;
+  H  
+  J 0 1
+  L ; 
+  N ? @
+  P ( 
+  R $ 
+  T 7 
+  V ,  
+SourceFile Deviceinfoendpoint.java 	Signature …Lcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest<Lcom/example/vsccompiler/deviceinfoendpoint/model/DeviceInfo;>; InnerClasses ] =com/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint InsertDeviceInfo !               
+       
+     N     *+µ *+,· ±           þ  ÿ                            =     	*+·  À °                  	       	 #    $      =     	*+· %À °          	        	       	 '    (      =     	*+· )À °                  	       	 +    ,      =     	*+· -À °                  	       	 /    0 1     =     	*+· 2À °                  	       	 5 6   7      =     	*+· 8À °                  	       	 :    ;      =     	*+· <À °          "        	       	 >    ? @     H     
+*+,· AÀ °          '         
+       
+ D     
+ E F A  "     &     *+¶ G°                 A 0 4     &     *+¶ I°                 A ; "     &     *+¶ K°                 A ? C     '     *+,¶ M°                 A ( "     &     *+¶ O°                 A $ "     &     *+¶ Q°                 A 7 "     &     *+¶ S°                 A , "     &     *+¶ U°                   W    X Y    Z [   
+   \ ^ 
