@@ -1,0 +1,20 @@
+Êþº¾   2 9  ;com/example/vsccompiler/deviceinfoendpoint/model/DeviceInfo  &com/google/api/client/json/GenericJson deviceInformation Ljava/lang/String; RuntimeVisibleAnnotations  Lcom/google/api/client/util/Key; deviceRegistrationID 	timestamp Ljava/lang/Long; 'Lcom/google/api/client/json/JsonString; <init> ()V Code
+   
+  LineNumberTable LocalVariableTable this =Lcom/example/vsccompiler/deviceinfoendpoint/model/DeviceInfo; getDeviceInformation ()Ljava/lang/String;	     setDeviceInformation Q(Ljava/lang/String;)Lcom/example/vsccompiler/deviceinfoendpoint/model/DeviceInfo; getDeviceRegistrationID	   	  setDeviceRegistrationID getTimestamp ()Ljava/lang/Long;	  # 
+  setTimestamp O(Ljava/lang/Long;)Lcom/example/vsccompiler/deviceinfoendpoint/model/DeviceInfo; set c(Ljava/lang/String;Ljava/lang/Object;)Lcom/example/vsccompiler/deviceinfoendpoint/model/DeviceInfo;
+  ) & * N(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/api/client/json/GenericJson; 	fieldName value Ljava/lang/Object; clone ?()Lcom/example/vsccompiler/deviceinfoendpoint/model/DeviceInfo;
+  1 . 2 *()Lcom/google/api/client/json/GenericJson;
+  4 . /
+  6 & ' 
+SourceFile DeviceInfo.java 1                   	            
+      
+          
+      /     *· ±                                /     *´ °           8                    ?     *+µ *°       
+    ?  @                          /     *´ °           G                    ?     *+µ *°       
+    N  O                	      !     /     *´ "°           V              $ %     ?     *+µ "*°       
+    ]  ^                
+    & '     H     
+*+,· (À °           c         
+       
+ +     
+ , -   . /     2     *· 0À °           h            A . 2     %     *¶ 3°                 A & *     '     *+,¶ 5°                   7    8
