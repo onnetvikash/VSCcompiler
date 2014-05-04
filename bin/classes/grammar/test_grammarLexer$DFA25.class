@@ -1,0 +1,9 @@
+Êþº¾   2 R  grammar/test_grammarLexer$DFA25  org/antlr/runtime/DFA this$0 Lgrammar/test_grammarLexer; <init> @(Lgrammar/test_grammarLexer;Lorg/antlr/runtime/BaseRecognizer;)V Code	    
+  
+   ()V	     
+recognizer "Lorg/antlr/runtime/BaseRecognizer;	     decisionNumber I	    grammar/test_grammarLexer   	DFA25_eot [S	     eot	  ! "  	DFA25_eof	  $ %  eof	  ' ( ) 	DFA25_min [C	  + , ) min	  . / ) 	DFA25_max	  1 2 ) max	  4 5  DFA25_accept	  7 8  accept	  : ;  
+DFA25_special	  = >  special	  @ A B DFA25_transition [[S	  D E B 
+transition LineNumberTable LocalVariableTable this !Lgrammar/test_grammarLexer$DFA25; getDescription ()Ljava/lang/String; M511:1: FLOATING_POINT_LITERAL : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )? ( FloatTypeSuffix )? | '.' ( '0' .. '9' )+ ( Exponent )? ( FloatTypeSuffix )? | ( '0' .. '9' )+ Exponent ( FloatTypeSuffix )? | ( '0' .. '9' )+ ( Exponent )? FloatTypeSuffix ); 
+SourceFile test_grammarLexer.java InnerClasses DFA25 !               	   ¢     F*+µ 
+*· *,µ *µ *² µ *²  µ #*² &µ **² -µ 0*² 3µ 6*² 9µ <*² ?µ C±    F   .    	    " ) 0  7! >" E# G       F H I     F     J K  	   -     L°    F      & G        H I    N    O P   
+    Q 
