@@ -1,0 +1,22 @@
+Êþº¾   2 /  Ocom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequestInitializer  Wcom/google/api/client/googleapis/services/json/CommonGoogleJsonClientRequestInitializer <init> ()V Code
+  	   LineNumberTable LocalVariableTable this QLcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequestInitializer; (Ljava/lang/String;)V
+     key Ljava/lang/String; '(Ljava/lang/String;Ljava/lang/String;)V
+     userIp initializeJsonRequest S(Lcom/google/api/client/googleapis/services/json/AbstractGoogleJsonClientRequest;)V 
+Exceptions  java/io/IOException 	Signature V(Lcom/google/api/client/googleapis/services/json/AbstractGoogleJsonClientRequest<*>;)V
+     ! Dcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest
+  # $ % #initializeDeviceinfoendpointRequest I(Lcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest;)V request PLcom/google/api/client/googleapis/services/json/AbstractGoogleJsonClientRequest; LocalVariableTypeTable SLcom/google/api/client/googleapis/services/json/AbstractGoogleJsonClientRequest<*>; L(Lcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest<*>;)V FLcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest; ILcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest<*>; 
+SourceFile )DeviceinfoendpointRequestInitializer.java !               3     *· ±    
+   
+    U  V          
+          >     *+· ±    
+   
+    \  ]          
+                I     *+,· ±    
+   
+    d  e           
+                                 \     *+· *+À  ¶ "±    
+       i  j 
+ k          
+      & '  (        & )   $ %            *    G      ±    
+       x          
+      & +  (        & ,   -    .
