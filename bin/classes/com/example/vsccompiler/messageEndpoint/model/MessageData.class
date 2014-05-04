@@ -1,0 +1,22 @@
+Êþº¾   2 <  9com/example/vsccompiler/messageEndpoint/model/MessageData  &com/google/api/client/json/GenericJson key 3Lcom/example/vsccompiler/messageEndpoint/model/Key; RuntimeVisibleAnnotations  Lcom/google/api/client/util/Key; message Ljava/lang/String; 	timestamp Ljava/lang/Long; 'Lcom/google/api/client/json/JsonString; <init> ()V Code
+     LineNumberTable LocalVariableTable this ;Lcom/example/vsccompiler/messageEndpoint/model/MessageData; getKey 5()Lcom/example/vsccompiler/messageEndpoint/model/Key;	     setKey p(Lcom/example/vsccompiler/messageEndpoint/model/Key;)Lcom/example/vsccompiler/messageEndpoint/model/MessageData; 
+getMessage ()Ljava/lang/String;	    	 
+ 
+setMessage O(Ljava/lang/String;)Lcom/example/vsccompiler/messageEndpoint/model/MessageData; getTimestamp ()Ljava/lang/Long;	  &   setTimestamp M(Ljava/lang/Long;)Lcom/example/vsccompiler/messageEndpoint/model/MessageData; set a(Ljava/lang/String;Ljava/lang/Object;)Lcom/example/vsccompiler/messageEndpoint/model/MessageData;
+  , ) - N(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/api/client/json/GenericJson; 	fieldName value Ljava/lang/Object; clone =()Lcom/example/vsccompiler/messageEndpoint/model/MessageData;
+  4 1 5 *()Lcom/google/api/client/json/GenericJson;
+  7 1 2
+  9 ) * 
+SourceFile MessageData.java 1                   	 
+                 
+     
+           /     *· ±                                /     *´ °           8                    ?     *+µ *°       
+    ?  @                          /     *´ °           G              ! "     ?     *+µ *°       
+    N  O                	 
+   # $     /     *´ %°           V              ' (     ?     *+µ %*°       
+    ]  ^                    ) *     H     
+*+,· +À °           c         
+       
+ . 
+    
+ / 0   1 2     2     *· 3À °           h            A 1 5     %     *¶ 6°                 A ) -     '     *+,¶ 8°                   :    ;
