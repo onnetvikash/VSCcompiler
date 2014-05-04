@@ -1,0 +1,15 @@
+Êþº¾   2 5  ,com/example/vsccompiler/CloudEndpointUtils$1  java/lang/Object  Hcom/google/api/client/googleapis/services/GoogleClientRequestInitializer val$enableGZip Z <init> (Z)V Code	  
+  
+   	  ()V LineNumberTable LocalVariableTable this .Lcom/example/vsccompiler/CloudEndpointUtils$1; 
+initialize J(Lcom/google/api/client/googleapis/services/AbstractGoogleClientRequest;)V 
+Exceptions  java/io/IOException 	Signature M(Lcom/google/api/client/googleapis/services/AbstractGoogleClientRequest<*>;)V
+    Ecom/google/api/client/googleapis/services/AbstractGoogleClientRequest   ! setDisableGZipContent J(Z)Lcom/google/api/client/googleapis/services/AbstractGoogleClientRequest; request GLcom/google/api/client/googleapis/services/AbstractGoogleClientRequest; LocalVariableTypeTable JLcom/google/api/client/googleapis/services/AbstractGoogleClientRequest<*>; 
+StackMapTable 
+SourceFile CloudEndpointUtils.java EnclosingMethod + *com/example/vsccompiler/CloudEndpointUtils - . 
+updateBuilder ’(Lcom/google/api/client/googleapis/services/AbstractGoogleClient$Builder;)Lcom/google/api/client/googleapis/services/AbstractGoogleClient$Builder; InnerClasses 1 Fcom/google/api/client/googleapis/services/AbstractGoogleClient$Builder 3 >com/google/api/client/googleapis/services/AbstractGoogleClient Builder               	 
+     8     
+*µ *· ±       
+      F        
+                       e     *´ š 	+¶ W±           I  J 
+ L                " #  $        " %  &    
+  '    ( )    * , /            0 2 4	
