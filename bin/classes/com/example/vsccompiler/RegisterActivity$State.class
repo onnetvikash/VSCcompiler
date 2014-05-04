@@ -1,0 +1,14 @@
+Êþº¾   2 :  .com/example/vsccompiler/RegisterActivity$State  java/lang/Enum 
+REGISTERED 0Lcom/example/vsccompiler/RegisterActivity$State; REGISTERING UNREGISTERED 
+UNREGISTERING ENUM$VALUES 1[Lcom/example/vsccompiler/RegisterActivity$State; <clinit> ()V Code 
+     <init> (Ljava/lang/String;I)V	     	     	     		   	 	    
+  LineNumberTable LocalVariableTable
+   this values 3()[Lcom/example/vsccompiler/RegisterActivity$State;
+ ( * ) java/lang/System + , 	arraycopy *(Ljava/lang/Object;ILjava/lang/Object;II)V valueOf D(Ljava/lang/String;)Lcom/example/vsccompiler/RegisterActivity$State;
+  0 - 1 5(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum; 
+SourceFile RegisterActivity.java 	Signature BLjava/lang/Enum<Lcom/example/vsccompiler/RegisterActivity$State;>; InnerClasses 8 (com/example/vsccompiler/RegisterActivity State@0     @    @    @    @ 	    
+       
+     x      T» Y· ³ » Y· ³ » Y· ³ » Y· ³ ½ Y² SY² SY² SY² S³ ±    !   
+    8 4 7 "             1     *+· #±    !       7 "        $    	 % &     6     ² YK*¾Y<½ YM¸ ',°    !        "      	 - .     *     
+*¸ /À °    !        "       2    3 4    5 6   
+   7 9@
