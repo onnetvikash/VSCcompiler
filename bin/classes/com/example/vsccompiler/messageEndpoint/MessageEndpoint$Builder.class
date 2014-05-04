@@ -1,0 +1,29 @@
+Êþº¾   2 g  ?com/example/vsccompiler/messageEndpoint/MessageEndpoint$Builder  Ocom/google/api/client/googleapis/services/json/AbstractGoogleJsonClient$Builder <init> ˆ(Lcom/google/api/client/http/HttpTransport;Lcom/google/api/client/json/JsonFactory;Lcom/google/api/client/http/HttpRequestInitializer;)V Code 	 "https://myapp.appspot.com/_ah/api/  messageEndpoint/v1/
+  
+   ­(Lcom/google/api/client/http/HttpTransport;Lcom/google/api/client/json/JsonFactory;Ljava/lang/String;Ljava/lang/String;Lcom/google/api/client/http/HttpRequestInitializer;Z)V LineNumberTable LocalVariableTable this ALcom/example/vsccompiler/messageEndpoint/MessageEndpoint$Builder; 	transport *Lcom/google/api/client/http/HttpTransport; jsonFactory (Lcom/google/api/client/json/JsonFactory; httpRequestInitializer 3Lcom/google/api/client/http/HttpRequestInitializer; build ;()Lcom/example/vsccompiler/messageEndpoint/MessageEndpoint;  7com/example/vsccompiler/messageEndpoint/MessageEndpoint
+     D(Lcom/example/vsccompiler/messageEndpoint/MessageEndpoint$Builder;)V 
+setRootUrl U(Ljava/lang/String;)Lcom/example/vsccompiler/messageEndpoint/MessageEndpoint$Builder;
+  #   $ e(Ljava/lang/String;)Lcom/google/api/client/googleapis/services/json/AbstractGoogleJsonClient$Builder; rootUrl Ljava/lang/String; setServicePath
+  ) ' $ servicePath setHttpRequestInitializer v(Lcom/google/api/client/http/HttpRequestInitializer;)Lcom/example/vsccompiler/messageEndpoint/MessageEndpoint$Builder;
+  . + / †(Lcom/google/api/client/http/HttpRequestInitializer;)Lcom/google/api/client/googleapis/services/json/AbstractGoogleJsonClient$Builder; setApplicationName
+  2 0 $ applicationName setSuppressPatternChecks D(Z)Lcom/example/vsccompiler/messageEndpoint/MessageEndpoint$Builder;
+  7 4 8 T(Z)Lcom/google/api/client/googleapis/services/json/AbstractGoogleJsonClient$Builder; suppressPatternChecks Z "setSuppressRequiredParameterChecks
+  = ; 8 suppressRequiredParameterChecks setSuppressAllChecks
+  A ? 8 suppressAllChecks $setMessageEndpointRequestInitializer Ž(Lcom/example/vsccompiler/messageEndpoint/MessageEndpointRequestInitializer;)Lcom/example/vsccompiler/messageEndpoint/MessageEndpoint$Builder;
+  F G H !setGoogleClientRequestInitializer (Lcom/google/api/client/googleapis/services/GoogleClientRequestInitializer;)Lcom/google/api/client/googleapis/services/json/AbstractGoogleJsonClient$Builder; !messageendpointRequestInitializer KLcom/example/vsccompiler/messageEndpoint/MessageEndpointRequestInitializer; (Lcom/google/api/client/googleapis/services/GoogleClientRequestInitializer;)Lcom/example/vsccompiler/messageEndpoint/MessageEndpoint$Builder; googleClientRequestInitializer JLcom/google/api/client/googleapis/services/GoogleClientRequestInitializer;
+  O 0 !
+  Q   !
+  S G K
+  U + , K()Lcom/google/api/client/googleapis/services/json/AbstractGoogleJsonClient;
+  X  
+  Z ? 5
+  \ ; 5
+  ^ ' !
+  ` 4 5 
+SourceFile MessageEndpoint.java InnerClasses Builder f Gcom/google/api/client/googleapis/services/json/AbstractGoogleJsonClient 1               q     
+*+,
+-· ±       "   j k l m n o p q    *    
+       
+      
+      
+           3     	» Y*· °          v        	        !     =     	*+· "À °          {        	       	 % &   ' !     =     	*+· (À °          €        	       	 * &   + ,     =     	*+· -À °          …        	       	     0 !     =     	*+· 1À °          Š        	       	 3 &   4 5     =     	*· 6À °                  	       	 9 :   ; 5     =     	*· <À °          ”        	       	 > :   ? 5     =     	*· @À °          ™        	       	 B :   C D     =     	*+· EÀ °          £        	       	 I J   G K     =     	*+· EÀ °          ©        	       	 L M A 0 $     &     *+¶ N°                 A   $     &     *+¶ P°                 A G H     &     *+¶ R°                 A + /     &     *+¶ T°                 A  V     %     *¶ W°                 A ? 8     &     *¶ Y°                 A ; 8     &     *¶ [°                 A ' $     &     *+¶ ]°                 A 4 8     &     *¶ _°                   a    b c       d   e d	
