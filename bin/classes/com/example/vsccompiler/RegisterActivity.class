@@ -1,0 +1,55 @@
+Êþº¾   2 ê  (com/example/vsccompiler/RegisterActivity  android/app/Activity curState 0Lcom/example/vsccompiler/RegisterActivity$State; registerListener #Landroid/view/View$OnTouchListener; unregisterListener messageEndpoint 9Lcom/example/vsccompiler/messageEndpoint/MessageEndpoint; <$SWITCH_TABLE$com$example$vsccompiler$RegisterActivity$State [I <init> ()V Code
+    	    .com/example/vsccompiler/RegisterActivity$State   UNREGISTERED	    	    	   	 	   
+  LineNumberTable LocalVariableTable this *Lcom/example/vsccompiler/RegisterActivity; onCreate (Landroid/os/Bundle;)V
+  ' $ % 
+  * + , setContentView (I)V 
+  / 0 1 findViewById (I)Landroid/view/View; 3 android/widget/Button 5 *com/example/vsccompiler/RegisterActivity$1
+ 4 7  8 -(Lcom/example/vsccompiler/RegisterActivity;)V : *com/example/vsccompiler/RegisterActivity$2
+ 9 7
+ 2 = > ? setOnTouchListener &(Landroid/view/View$OnTouchListener;)V A ?com/example/vsccompiler/messageEndpoint/MessageEndpoint$Builder
+ C E D 9com/google/api/client/extensions/android/http/AndroidHttp F G newCompatibleTransport ,()Lcom/google/api/client/http/HttpTransport; I 1com/google/api/client/json/jackson/JacksonFactory
+ H  L *com/example/vsccompiler/RegisterActivity$3
+ K 7
+ @ O  P ˆ(Lcom/google/api/client/http/HttpTransport;Lcom/google/api/client/json/JsonFactory;Lcom/google/api/client/http/HttpRequestInitializer;)V
+ R T S *com/example/vsccompiler/CloudEndpointUtils U V 
+updateBuilder ’(Lcom/google/api/client/googleapis/services/AbstractGoogleClient$Builder;)Lcom/google/api/client/googleapis/services/AbstractGoogleClient$Builder;
+ @ X Y Z build ;()Lcom/example/vsccompiler/messageEndpoint/MessageEndpoint; savedInstanceState Landroid/os/Bundle; 	regButton Landroid/widget/Button; endpointBuilder ALcom/example/vsccompiler/messageEndpoint/MessageEndpoint$Builder; onNewIntent (Landroid/content/Intent;)V
+  d a b f gcmIntentServiceMessage
+ h j i android/content/Intent k l getBooleanExtra (Ljava/lang/String;Z)Z n message
+ h p q r getStringExtra &(Ljava/lang/String;)Ljava/lang/String;
+  t u v 
+showDialog (Ljava/lang/String;)V x registrationMessage z error	  | }  REGISTERING
+   €  updateState 3(Lcom/example/vsccompiler/RegisterActivity$State;)V	  ƒ „  
+REGISTERED † :com/example/vsccompiler/RegisterActivity$QueryMessagesTask
+ … ˆ  ‰ |(Lcom/example/vsccompiler/RegisterActivity;Landroid/app/Activity;Lcom/example/vsccompiler/messageEndpoint/MessageEndpoint;)V ‹ java/lang/Void
+ …  Ž  execute +([Ljava/lang/Object;)Landroid/os/AsyncTask; intent Landroid/content/Intent; 
+StackMapTable
+  ”  • ()[I
+  — ˜ ™ ordinal ()I › 
+Unregister
+ 2  ž Ÿ setText (Ljava/lang/CharSequence;)V
+ 2 ¡ ¢ £ 
+setEnabled (Z)V ¥ Registering... § Register © Unregistering... newState registerButton ­ android/app/AlertDialog$Builder
+ ¬ ¯  ° (Landroid/content/Context;)V
+ ¬ ² ³ ´ 
+setMessage ;(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder; 
+ · *com/example/vsccompiler/RegisterActivity$4
+ ¶ 7
+ ¬ º » ¼ setPositiveButton U(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+ ¬ ¾ ¿ À show ()Landroid/app/AlertDialog; Ljava/lang/String; access$0 ?(Lcom/example/vsccompiler/RegisterActivity;Ljava/lang/String;)V access$1 ](Lcom/example/vsccompiler/RegisterActivity;Lcom/example/vsccompiler/RegisterActivity$State;)V	  Ç  
+  É Ê Ë values 3()[Lcom/example/vsccompiler/RegisterActivity$State;	  Í Î  
+UNREGISTERING Ð java/lang/NoSuchFieldError 
+ 
+SourceFile RegisterActivity.java InnerClasses Ö android/app/AlertDialog Builder Ù /android/content/DialogInterface$OnClickListener Û android/content/DialogInterface OnClickListener Þ !android/view/View$OnTouchListener à android/view/View OnTouchListener QueryMessagesTask State å 7com/example/vsccompiler/messageEndpoint/MessageEndpoint ç Fcom/google/api/client/googleapis/services/AbstractGoogleClient$Builder é >com/google/api/client/googleapis/services/AbstractGoogleClient !                 	     
+   
+  
+           Y     *· *² µ *µ *µ *µ ±            5  ;  <  =  >  5 !        " #    $ %     Ö     ^*+· &*(¶ )*-¶ .À 2M*» 4Y*· 6µ *» 9Y*· ;µ ,*´ ¶ <» @Y¸ B» HY· J» KY*· M· NN*-¸ QÀ @¶ Wµ ±        6 
+   B  C  E  G ! l - | 5  9 ‚ < ƒ C „ K  O ˆ ] ‰ !   *    ^ " #     ^ [ \   I ] ^  O  _ `   a b         *+· c+e¶ g™ r*+m¶ o· s+w¶ g™ I+y¶ g™ !*´ ² {¦ 
+*² · ~§ @*² ‚· ~§ 6*´ ² {¦ 
+*² ‚· ~§ "*² · ~§ » …Y***´ · ‡½ Š¶ ŒW±        F      “  •  — # ™ - ¡ 7 ¢ > £ A ¤ H ¦ K ® U ¯ \ ° _ ± f ´ i º ~ ½ !        " #       ‘  ’   	 û A		  €          {*-¶ .À 2M¸ “+¶ –.ª    c            4   B   X,š¶ œ,*´ ¶ <,¶  § 2,¤¶ œ,¶  § $,¦¶ œ,*´ ¶ <,¶  § ,¨¶ œ,¶  *+µ ±        J    À 
+ Á 
+ Á 0 Ã 6 Ä > Å C Æ F É L Ê Q Ë T Î Z Ï b Ð g Ñ j Ô p Õ u Ø z Ù !        { " #     { ª   
+ q « ^  ’    ü 0 2
+
+  u v     j     » ¬Y*· ®+¶ ±µ» ¶Y*· ¸¶ ¹¶ ½W±            Ü  Ý  Þ  ß  Þ  ã  ä !        " #      n Á  Â Ã     &     *+· s±            Û !      Ä Å     &     *+· ~±            ¿ !       •     ³     J² ÆYÆ °W¸ È¾¼
+K*² ‚¶ –O§ W*² {¶ –O§ W*² ¶ –O§ W*² Ì¶ –O§ W*Y³ Æ°     Ï  & ) Ï * 3 6 Ï 7 @ C Ï          5 !      ’   # 	H Ñÿ   Ñ  Ï K Ï K Ï K Ï   Ò    Ó Ô   Z  ¬ Õ × 	 Ø Ú Ü	 Ý ß á	 4       9       K       ¶       …  â    ã@ @ ä ×  æ è ×	
