@@ -1,0 +1,20 @@
+Êþº¾   2 A  Mcom/example/vsccompiler/deviceinfoendpoint/model/CollectionResponseDeviceInfo  &com/google/api/client/json/GenericJson items Ljava/util/List; 	Signature OLjava/util/List<Lcom/example/vsccompiler/deviceinfoendpoint/model/DeviceInfo;>; RuntimeVisibleAnnotations  Lcom/google/api/client/util/Key; 
+nextPageToken Ljava/lang/String; <clinit> ()V Code  ;com/example/vsccompiler/deviceinfoendpoint/model/DeviceInfo
+    com/google/api/client/util/Data   nullOf %(Ljava/lang/Class;)Ljava/lang/Object; LineNumberTable LocalVariableTable <init>
+     this OLcom/example/vsccompiler/deviceinfoendpoint/model/CollectionResponseDeviceInfo; getItems ()Ljava/util/List; Q()Ljava/util/List<Lcom/example/vsccompiler/deviceinfoendpoint/model/DeviceInfo;>;	  #   setItems a(Ljava/util/List;)Lcom/example/vsccompiler/deviceinfoendpoint/model/CollectionResponseDeviceInfo;  (Ljava/util/List<Lcom/example/vsccompiler/deviceinfoendpoint/model/DeviceInfo;>;)Lcom/example/vsccompiler/deviceinfoendpoint/model/CollectionResponseDeviceInfo; LocalVariableTypeTable getNextPageToken ()Ljava/lang/String;	  +   setNextPageToken c(Ljava/lang/String;)Lcom/example/vsccompiler/deviceinfoendpoint/model/CollectionResponseDeviceInfo; set u(Ljava/lang/String;Ljava/lang/Object;)Lcom/example/vsccompiler/deviceinfoendpoint/model/CollectionResponseDeviceInfo;
+  1 . 2 N(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/api/client/json/GenericJson; 	fieldName value Ljava/lang/Object; clone Q()Lcom/example/vsccompiler/deviceinfoendpoint/model/CollectionResponseDeviceInfo;
+  9 6 : *()Lcom/google/api/client/json/GenericJson;
+  < 6 7
+  > . / 
+SourceFile !CollectionResponseDeviceInfo.java 1               	     
+       	     
+   
+  
+      +      ¸ W±       
+    +  ,              /     *· ±                                  !    /     *´ "°           8              $ %      &    Q     *+µ "*°       
+    ?  @                   '            ( )     /     *´ *°           G              , -     ?     *+µ **°       
+    N  O                    . /     H     
+*+,· 0À °           T         
+       
+ 3     
+ 4 5   6 7     2     *· 8À °           Y            A 6 :     %     *¶ ;°                 A . 2     '     *+,¶ =°                   ?    @
