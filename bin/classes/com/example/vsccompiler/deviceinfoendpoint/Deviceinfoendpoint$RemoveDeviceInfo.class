@@ -1,0 +1,36 @@
+Êþº¾   2 o  Ncom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint$RemoveDeviceInfo  Dcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest 	REST_PATH Ljava/lang/String; 
+ConstantValue 	 deviceinfo/{id} id RuntimeVisibleAnnotations  Lcom/google/api/client/util/Key; this$0 ?Lcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint; <init> T(Lcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint;Ljava/lang/String;)V Code	   
+   DELETE  java/lang/Void
+     ‰(Lcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Class;)V  (Required parameter id must be specified.
+     (com/google/api/client/util/Preconditions ! " checkNotNull 8(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; $ java/lang/String	  & 
+  LineNumberTable LocalVariableTable this PLcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint$RemoveDeviceInfo; setAlt d(Ljava/lang/String;)Lcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint$RemoveDeviceInfo;
+  . + / Z(Ljava/lang/String;)Lcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest; alt 	setFields
+  3 1 / fields setKey
+  7 5 / key 
+setOauthToken
+  ; 9 / 
+oauthToken setPrettyPrint e(Ljava/lang/Boolean;)Lcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint$RemoveDeviceInfo;
+  @ = A [(Ljava/lang/Boolean;)Lcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest; prettyPrint Ljava/lang/Boolean; setQuotaUser
+  F D / 	quotaUser 	setUserIp
+  J H / userIp getId ()Ljava/lang/String; setId set v(Ljava/lang/String;Ljava/lang/Object;)Lcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint$RemoveDeviceInfo;
+  R O S l(Ljava/lang/String;Ljava/lang/Object;)Lcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest; 
+parameterName value Ljava/lang/Object;
+  X + ,
+  Z = >
+  \ H ,
+  ^ O P
+  ` 5 ,
+  b 1 ,
+  d D ,
+  f 9 , 
+SourceFile Deviceinfoendpoint.java 	Signature XLcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest<Ljava/lang/Void;>; InnerClasses m =com/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint RemoveDeviceInfo !                
+           
+            _     *+µ *+· *,¸ À #µ %±    '      ¾ ¿ À Á (        ) *      
+    + ,     =     	*+· -À °    '      Å (       	 ) *     	 0    1 ,     =     	*+· 2À °    '      Ê (       	 ) *     	 4    5 ,     =     	*+· 6À °    '      Ï (       	 ) *     	 8    9 ,     =     	*+· :À °    '      Ô (       	 ) *     	 <    = >     =     	*+· ?À °    '      Ù (       	 ) *     	 B C   D ,     =     	*+· EÀ °    '      Þ (       	 ) *     	 G    H ,     =     	*+· IÀ °    '      ã (       	 ) *     	 K    L M     /     *´ %°    '      í (        ) *    N ,     ?     *+µ %*°    '   
+   ñ ò (        ) *      
+    O P     H     
+*+,· QÀ °    '      ÷ (        
+ ) *     
+ T     
+ U V A + /     &     *+¶ W°    '        (     A = A     &     *+¶ Y°    '        (     A H /     &     *+¶ [°    '        (     A O S     '     *+,¶ ]°    '        (     A 5 /     &     *+¶ _°    '        (     A 1 /     &     *+¶ a°    '        (     A D /     &     *+¶ c°    '        (     A 9 /     &     *+¶ e°    '        (       g    h i    j k   
+   l n 
