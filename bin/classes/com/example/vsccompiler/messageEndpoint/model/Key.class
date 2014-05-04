@@ -1,0 +1,23 @@
+Êþº¾   2 Q  1com/example/vsccompiler/messageEndpoint/model/Key  &com/google/api/client/json/GenericJson appId Ljava/lang/String; RuntimeVisibleAnnotations  Lcom/google/api/client/util/Key; complete Ljava/lang/Boolean; id Ljava/lang/Long; 'Lcom/google/api/client/json/JsonString; kind name 	namespace parent 3Lcom/example/vsccompiler/messageEndpoint/model/Key; <init> ()V Code
+     LineNumberTable LocalVariableTable this getAppId ()Ljava/lang/String;	     setAppId G(Ljava/lang/String;)Lcom/example/vsccompiler/messageEndpoint/model/Key; getComplete ()Ljava/lang/Boolean;	  $ 	 
+ setComplete H(Ljava/lang/Boolean;)Lcom/example/vsccompiler/messageEndpoint/model/Key; getId ()Ljava/lang/Long;	  *   setId E(Ljava/lang/Long;)Lcom/example/vsccompiler/messageEndpoint/model/Key; getKind	  /   setKind getName	  3   setName getNamespace	  7   setNamespace 	getParent 5()Lcom/example/vsccompiler/messageEndpoint/model/Key;	  <   	setParent h(Lcom/example/vsccompiler/messageEndpoint/model/Key;)Lcom/example/vsccompiler/messageEndpoint/model/Key; set Y(Ljava/lang/String;Ljava/lang/Object;)Lcom/example/vsccompiler/messageEndpoint/model/Key;
+  B ? C N(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/api/client/json/GenericJson; 	fieldName value Ljava/lang/Object; clone
+  I G J *()Lcom/google/api/client/json/GenericJson;
+  L G :
+  N ? @ 
+SourceFile Key.java 1                   	 
+                 
+     
+                                                           /     *· ±                                /     *´ °           P                     ?     *+µ *°       
+    W  X                    ! "     /     *´ #°           _              % &     ?     *+µ #*°       
+    f  g                	 
+   ' (     /     *´ )°           n              + ,     ?     *+µ )*°       
+    u  v                    -      /     *´ .°           }              0       ?     *+µ .*°       
+    „  …                    1      /     *´ 2°           Œ              4       ?     *+µ 2*°       
+    “  ”                    5      /     *´ 6°           ›              8       ?     *+µ 6*°       
+    ¢  £                    9 :     /     *´ ;°           ª              = >     ?     *+µ ;*°       
+    ±  ²                    ? @     H     
+*+,· AÀ °           ·         
+       
+ D     
+ E F   G :     2     *· HÀ °           ¼            A G J     %     *¶ K°                 A ? C     '     *+,¶ M°                   O    P
