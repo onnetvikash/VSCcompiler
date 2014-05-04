@@ -1,0 +1,18 @@
+Êþº¾   2 =  &com/example/vsccompiler/MainActivity$3  java/lang/Object  !android/view/View$OnClickListener this$0 &Lcom/example/vsccompiler/MainActivity; <init> )(Lcom/example/vsccompiler/MainActivity;)V Code	  
+  
+   	  ()V LineNumberTable LocalVariableTable this (Lcom/example/vsccompiler/MainActivity$3; onClick (Landroid/view/View;)V
+    $com/example/vsccompiler/MainActivity   access$2 )(Lcom/example/vsccompiler/MainActivity;)Z
+    
+ access$3
+  ! " # access$0 H(Lcom/example/vsccompiler/MainActivity;)Lcom/dropbox/client2/DropboxAPI;
+ % ' & com/dropbox/client2/DropboxAPI ( ) 
+getSession '()Lcom/dropbox/client2/session/Session; + .com/dropbox/client2/android/AndroidAuthSession
+ * - . / startAuthentication (Landroid/content/Context;)V v Landroid/view/View; 
+StackMapTable 
+SourceFile MainActivity.java EnclosingMethod 7 8 onCreate (Landroid/os/Bundle;)V InnerClasses ; android/view/View OnClickListener               	 
+     8     
+*+µ *· ±       
+      ]        
+            w     )*´ ¸ ™ 
+*´ ¸ § *´ ¸  ¶ $À **´ ¶ ,±           a 
+ b  c  e ( g        )       ) 0 1  2      3    4 5     6 9      : <	       
