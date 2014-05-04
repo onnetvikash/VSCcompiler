@@ -1,0 +1,32 @@
+Êþº¾   2 t  Dcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest  Ncom/google/api/client/googleapis/services/json/AbstractGoogleJsonClientRequest alt Ljava/lang/String; RuntimeVisibleAnnotations  Lcom/google/api/client/util/Key; fields key 
+oauthToken value oauth_token prettyPrint Ljava/lang/Boolean; 	quotaUser userIp <init> ‰(Lcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Class;)V 	Signature Ž(Lcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Class<TT;>;)V Code
+     “(Lcom/google/api/client/googleapis/services/json/AbstractGoogleJsonClient;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Class;)V LineNumberTable LocalVariableTable this FLcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest; client ?Lcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint; method uriTemplate content Ljava/lang/Object; 
+responseClass Ljava/lang/Class; LocalVariableTypeTable KLcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest<TT;>; Ljava/lang/Class<TT;>; getAlt ()Ljava/lang/String;	  ,   setAlt Z(Ljava/lang/String;)Lcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest; _(Ljava/lang/String;)Lcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest<TT;>; 	getFields	  2 	  	setFields getKey	  6 
+  setKey 
+getOauthToken	  :   
+setOauthToken getPrettyPrint ()Ljava/lang/Boolean;	  ?   setPrettyPrint [(Ljava/lang/Boolean;)Lcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest; `(Ljava/lang/Boolean;)Lcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest<TT;>; getQuotaUser	  E   setQuotaUser 	getUserIp	  I   	setUserIp getAbstractGoogleClient A()Lcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint;
+  N K O K()Lcom/google/api/client/googleapis/services/json/AbstractGoogleJsonClient; Q =com/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint setDisableGZipContent I(Z)Lcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest; N(Z)Lcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest<TT;>;
+  V R W S(Z)Lcom/google/api/client/googleapis/services/json/AbstractGoogleJsonClientRequest; disableGZipContent Z setRequestHeaders p(Lcom/google/api/client/http/HttpHeaders;)Lcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest; u(Lcom/google/api/client/http/HttpHeaders;)Lcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest<TT;>;
+  ^ Z _ z(Lcom/google/api/client/http/HttpHeaders;)Lcom/google/api/client/googleapis/services/json/AbstractGoogleJsonClientRequest; headers (Lcom/google/api/client/http/HttpHeaders; set l(Ljava/lang/String;Ljava/lang/Object;)Lcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest; q(Ljava/lang/String;Ljava/lang/Object;)Lcom/example/vsccompiler/deviceinfoendpoint/DeviceinfoendpointRequest<TT;>;
+  f b g v(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/api/client/googleapis/services/json/AbstractGoogleJsonClientRequest; 
+parameterName
+  j R S
+  l K L
+  n b c
+  p Z [ 
+SourceFile DeviceinfoendpointRequest.java k<T:Ljava/lang/Object;>Lcom/google/api/client/googleapis/services/json/AbstractGoogleJsonClientRequest<TT;>;!                   	            
+                      s 
+                                                  œ     *+,-· ±           )  *  +  ,  -  .  /    >                         !      " #     $ %  &         '      $ (   ) *     A     *´ +°           9             &         '    - .      /    Q     *+µ +*°       
+    >  ?                   &         '    0 *     A     *´ 1°           J             &         '    3 .      /    Q     *+µ 1*°       
+    O  P                	   &         '    4 *     A     *´ 5°           _             &         '    7 .      /    Q     *+µ 5*°       
+    g  h                
+   &         '    8 *     A     *´ 9°           s             &         '    ; .      /    Q     *+µ 9*°       
+    x  y                   &         '    < =     A     *´ >°           „             &         '    @ A      B    Q     *+µ >*°       
+    ‰  Š                   &         '    C *     A     *´ D°           ™             &         '    F .      /    Q     *+µ D*°       
+    ¡  ¢                   &         '    G *     A     *´ H°           ±             &         '    J .      /    Q     *+µ H*°       
+    ¹  º                   &         '    K L     D     *· MÀ P°           ¿             &         '    R S      T    O     	*· UÀ °           Ä        	       	 X Y  &       	  '    Z [      \    O     	*+· ]À °           É        	       	 ` a  &       	  '    b c      d    Z     
+*+,· eÀ °           Î         
+       
+ h     
+  #  &       
+  '  A R W     &     *¶ i°                 A K O     %     *¶ k°                 A b g     '     *+,¶ m°                 A Z _     &     *+¶ o°                   q    r     s
