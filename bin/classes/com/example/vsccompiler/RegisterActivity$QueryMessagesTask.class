@@ -1,0 +1,36 @@
+Êþº¾   2 ª  :com/example/vsccompiler/RegisterActivity$QueryMessagesTask  android/os/AsyncTask exceptionThrown Ljava/lang/Exception; messageEndpoint 9Lcom/example/vsccompiler/messageEndpoint/MessageEndpoint; this$0 *Lcom/example/vsccompiler/RegisterActivity; <init> |(Lcom/example/vsccompiler/RegisterActivity;Landroid/app/Activity;Lcom/example/vsccompiler/messageEndpoint/MessageEndpoint;)V Code	   	 
+
+     ()V	    	     LineNumberTable LocalVariableTable this <Lcom/example/vsccompiler/RegisterActivity$QueryMessagesTask; activity Landroid/app/Activity; doInBackground `([Ljava/lang/Void;)Lcom/example/vsccompiler/messageEndpoint/model/CollectionResponseMessageData;
+   " ! 7com/example/vsccompiler/messageEndpoint/MessageEndpoint # $ listMessages H()Lcom/example/vsccompiler/messageEndpoint/MessageEndpoint$ListMessages;
+ & ( ' java/lang/Integer ) * valueOf (I)Ljava/lang/Integer;
+ , . - Dcom/example/vsccompiler/messageEndpoint/MessageEndpoint$ListMessages / 0 setLimit [(Ljava/lang/Integer;)Lcom/example/vsccompiler/messageEndpoint/MessageEndpoint$ListMessages;
+ , 2 3 4 execute ()Ljava/lang/Object; 6 Kcom/example/vsccompiler/messageEndpoint/model/CollectionResponseMessageData 8 java/io/IOException params [Ljava/lang/Void; messages MLcom/example/vsccompiler/messageEndpoint/model/CollectionResponseMessageData; e Ljava/io/IOException; 
+StackMapTable 
+onPostExecute P(Lcom/example/vsccompiler/messageEndpoint/model/CollectionResponseMessageData;)V C (com/example/vsccompiler/RegisterActivity
+ E G F java/lang/Class H I getName ()Ljava/lang/String; K Exception when listing Messages
+ M O N android/util/Log = P <(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I R java/lang/StringBuilder T <Failed to retrieve the last 5 messages from the endpoint at 
+ Q V  W (Ljava/lang/String;)V
+   Y Z I 
+getBaseUrl
+ Q \ ] ^ append -(Ljava/lang/String;)Ljava/lang/StringBuilder; ` , check log for details
+ Q b c I toString
+ B e f g access$0 ?(Lcom/example/vsccompiler/RegisterActivity;Ljava/lang/String;)V 
+ B j k l findViewById (I)Landroid/view/View; n android/widget/TextView p Last 5 Messages read from  r :
+
+ m t u v setText (Ljava/lang/CharSequence;)V
+ 5 x y z getItems ()Ljava/util/List; | ~ } java/util/List  € iterator ()Ljava/util/Iterator; ‚ „ ƒ java/util/Iterator … 4 next ‡ 9com/example/vsccompiler/messageEndpoint/model/MessageData
+ † ‰ Š I 
+getMessage
+ Œ Ž  java/lang/String )  &(Ljava/lang/Object;)Ljava/lang/String; ‘ 
+
+ m “ ] v ‚ • – — hasNext ()Z messageView Landroid/widget/TextView; message ;Lcom/example/vsccompiler/messageEndpoint/model/MessageData; (Ljava/lang/Object;)V
+  ž @ A '([Ljava/lang/Object;)Ljava/lang/Object; :
+  ¢   
+SourceFile RegisterActivity.java 	Signature …Landroid/os/AsyncTask<Ljava/lang/Void;Ljava/lang/Void;Lcom/example/vsccompiler/messageEndpoint/model/CollectionResponseMessageData;>; InnerClasses QueryMessagesTask ListMessages                    	 
+        
+   ^     *+µ *· *µ *-µ ±           ð 	 í  ñ  ò                          „    
+        *´ ¶ ¸ %¶ +¶ 1À 5M,°M*,µ °      7         ø  ÷  ù  ú  û  ü    *            9 :    ; <    = >  ?    W 7  @ A  
+  X     ¥*´ Æ 7B¶ DJ*´ ¸ LW*´ » QYS· U*´ ¶ X¶ [_¶ [¶ a¸ d§ l*´ h¶ iÀ mM,» QYo· U*´ ¶ X¶ [q¶ [¶ a¶ s+¶ w¹ { :§ (¹  À †N,» QY-¶ ˆ¸ ‹· U¶ [¶ a¶ ’¹ ” šÿÔ±       F        # - 5 8	 ; H R
+ d g € š ¤    *    ¥       ¥ ; <  H \ ˜ ™  €  š ›  ?   % ;ÿ 9   5 m  ‚  $ÿ 	   5  D @ œ  
+   )     	*+À 5¶ ±                 Ä  Ÿ  
+   )     	*+À  ¶ ¡°                   £    ¤ ¥    ¦ §      B ¨  ,   © 
