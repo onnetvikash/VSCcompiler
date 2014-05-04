@@ -1,0 +1,71 @@
+Êþº¾   2D  $com/example/vsccompiler/MainActivity  android/app/Activity 	mLoggedIn Z APP_KEY Ljava/lang/String; 
+ConstantValue  wg0hkz67lza4mof 
+APP_SECRET  sbuivmw67m7yphr ACCESS_TYPE 0Lcom/dropbox/client2/session/Session$AccessType; ACCOUNT_PREFS_NAME  prefs ACCESS_KEY_NAME  
+ACCESS_KEY ACCESS_SECRET_NAME  
+ACCESS_SECRET mSubmit Landroid/widget/Button; 	mRetrieve mSave mCode Landroid/widget/EditText; mError reader Ljava/io/BufferedReader; mApi  Lcom/dropbox/client2/DropboxAPI; 	Signature RLcom/dropbox/client2/DropboxAPI<Lcom/dropbox/client2/android/AndroidAuthSession;>; <clinit> ()V Code	 + - , .com/dropbox/client2/session/Session$AccessType .  
+APP_FOLDER	  0   LineNumberTable LocalVariableTable <init>
+  5 3 (	  7 ! " this &Lcom/example/vsccompiler/MainActivity; onCreate (Landroid/os/Bundle;)V
+  = : ;
+  ? @ A buildSession 2()Lcom/dropbox/client2/android/AndroidAuthSession; C com/dropbox/client2/DropboxAPI
+ B E 3 F ((Lcom/dropbox/client2/session/Session;)V	  H # $  
+  K L M setContentView (I)V 
+  P Q R findViewById (I)Landroid/view/View; T android/widget/EditText	  V     Y android/widget/Button	  [    	  ^   	  a   	  d   f &com/example/vsccompiler/MainActivity$1
+ e h 3 i )(Lcom/example/vsccompiler/MainActivity;)V
+ X k l m setOnClickListener &(Landroid/view/View$OnClickListener;)V o &com/example/vsccompiler/MainActivity$2
+ n h r &com/example/vsccompiler/MainActivity$3
+ q h  v java/io/PipedOutputStream
+ u 5 y java/io/PipedInputStream
+ x { 3 | (Ljava/io/PipedOutputStream;)V ~ java/io/BufferedReader € java/io/InputStreamReader
+  ‚ 3 ƒ (Ljava/io/InputStream;)V
+ } … 3 † (Ljava/io/Reader;)V
+ ˆ Š ‰ java/io/IOException ‹ ( printStackTrace  java/io/PrintStream
+ Œ  3  (Ljava/io/OutputStream;)V
+ ’ ” “ java/lang/System • – setErr (Ljava/io/PrintStream;)V ˜ &com/example/vsccompiler/MainActivity$4
+ — š 3 › D(Lcom/example/vsccompiler/MainActivity;Ljava/io/PipedOutputStream;)V savedInstanceState Landroid/os/Bundle; session 0Lcom/dropbox/client2/android/AndroidAuthSession; 
+compileButton pipeOut Ljava/io/PipedOutputStream; pipeIn Ljava/io/PipedInputStream; e1 Ljava/io/IOException; 
+StackMapTable © android/os/Bundle « .com/dropbox/client2/android/AndroidAuthSession logOut
+ B ® ¯ ° 
+getSession '()Lcom/dropbox/client2/session/Session;
+ ª ² ³ ( unlink
+  µ ¶ ( 	clearKeys
+  ¸ ¹ º setLoggedIn (Z)V	  ¼   ¾ UnLink
+ X À Á Â setText (Ljava/lang/CharSequence;)V
+ X Ä Å M 
+setVisibility Ç Link loggedIn Ê &com/dropbox/client2/session/AppKeyPair
+ É Ì 3 Í '(Ljava/lang/String;Ljava/lang/String;)V
+  Ï Ð Ñ getKeys ()[Ljava/lang/String; Ó +com/dropbox/client2/session/AccessTokenPair
+ Ò Ì
+ ª Ö 3 × ˆ(Lcom/dropbox/client2/session/AppKeyPair;Lcom/dropbox/client2/session/Session$AccessType;Lcom/dropbox/client2/session/AccessTokenPair;)V
+ ª Ù 3 Ú [(Lcom/dropbox/client2/session/AppKeyPair;Lcom/dropbox/client2/session/Session$AccessType;)V 
+appKeyPair (Lcom/dropbox/client2/session/AppKeyPair; stored [Ljava/lang/String; accessToken -Lcom/dropbox/client2/session/AccessTokenPair; Þ
+  ã ä å getSharedPreferences 8(Ljava/lang/String;I)Landroid/content/SharedPreferences; ç é è !android/content/SharedPreferences ê ë 	getString 8(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String; í java/lang/String #Landroid/content/SharedPreferences; key secret ret onResume
+  ô ò (
+ ª ö ÷ ø authenticationSuccessful ()Z
+ ª ú û ü finishAuthentication ()Ljava/lang/String;
+ ª þ ÿ  getAccessTokenPair /()Lcom/dropbox/client2/session/AccessTokenPair;	 %com/dropbox/client2/session/TokenPair ï 	 ð 
+ 	 Í 	storeKeys java/lang/IllegalStateException tokens 'Lcom/dropbox/client2/session/TokenPair; ç edit ,()Landroid/content/SharedPreferences$Editor; (android/content/SharedPreferences$Editor 	putString P(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor; ø commit *Landroid/content/SharedPreferences$Editor; clear onCreateOptionsMenu (Landroid/view/Menu;)Z
+ "#$ getMenuInflater ()Landroid/view/MenuInflater;  
+')( android/view/MenuInflater*+ inflate (ILandroid/view/Menu;)V menu Landroid/view/Menu; access$0 H(Lcom/example/vsccompiler/MainActivity;)Lcom/dropbox/client2/DropboxAPI; access$1 A(Lcom/example/vsccompiler/MainActivity;)Landroid/widget/EditText; access$2 )(Lcom/example/vsccompiler/MainActivity;)Z access$3
+ 6 ¬ ( access$4 
+SourceFile MainActivity.java InnerClasses Editor= !android/view/View$OnClickListener? android/view/View OnClickListenerB #com/dropbox/client2/session/Session 
+AccessType !               	    
+     	    
+          	         	         	                                 ! "    # $  %    &   ' (  )   +      ² *³ /±    1   
+    (  + 2       3 (  )   <     
+*· 4*µ 6±    1       $  1 	 $ 2       
+ 8 9    : ;  )  Á     á*+· <*· >M*» BY,· Dµ G*I¶ J**N¶ OÀ Sµ U**W¶ OÀ Xµ Z**\¶ OÀ Sµ ]**_¶ OÀ Xµ `**b¶ OÀ Xµ c*´ c» eY*· g¶ j*´ Z» nY*· p¶ j*´ `» qY*· s¶ j*t¶ OÀ XN» uY· w:» xY· z:*» }Y» Y· · „µ 6§ 
+:¶ ‡» ŒY· Ž¸ ‘-» —Y*· ™¶ j±   ¼ ¿ ˆ  1   V    6  7 
+ 8  9  : ) ; 6 < C = P > ] ? l G { ] Š i ” j  n ¨ p ¼ q Á s Æ u Ò x à š 2   H    á 8 9     á œ   
+ × ž Ÿ  ” M      D ¡ ¢  ¨  £ ¤  Á  ¥ ¦  §    ÿ ¿   ¨ ª X u  ˆ  ¬ (  )   M     *´ G¶ ­À ª¶ ±*· ´*· ·±    1        
+    ¢  £ 2        8 9    ¹ º  )   £     A*µ »™ *´ `½¶ ¿*´ Z¶ Ã*´ c¶ Ã§ *´ `Æ¶ ¿*´ Z¶ Ã*´ c¶ Ã±    1   * 
+   ©  ª 	 «  ¬  ­ " ® % ¯ . ° 7 ± @ ³ 2       A 8 9     A È   §    %  @ A  )   ç     C» ÉY
+
+· ËL*· ÎN-Æ #» ÒY-2-2· Ô:» ªY+² /· ÕM§ » ªY+² /· ØM,°    1   "    µ  ¸  ¹  º $ » 2 ¼ 5 ½ A À 2   >    C 8 9    7 Û Ü  2  ž Ÿ  A  ž Ÿ   2 Ý Þ  $  ß à  §   & ÿ 5   É  á  ÿ    É ª á    Ð Ñ  )   ¿     9*¶ âL+¹ æ M+¹ æ N,Æ -Æ ½ ì:,S-S°°    1   & 	   Ã  Ä  Å  Æ $ Ç * È / É 4 Ê 7 Ì 2   4    9 8 9    1  î   ' ï     ð   * 
+ ñ Þ  §    þ 7 ç ì ì  ò (  )   µ     6*· ó*´ G¶ ­À ªL+¶ õ™ "+¶ ùW+¶ ýM*,´,´·*· ·§ M±   1 4
+  1   & 	   Ñ  Ò  Õ  Ø  Û   Ü , Ý 1 Þ 5 á 2        6 8 9    ' ž Ÿ    
+  §    ÿ 4   ª 
+  	 Í  )   •     /*¶ âN-¹ :+¹ W,¹ W¹ W±    1       å  æ  ç  è & é . ê 2   4    / 8 9     / ï     / ð    '  î      ¶ (  )   l     *¶ âL+¹ M,¹ W,¹ W±    1       í  î  ï  ð  ñ 2         8 9      î        )   E     
+*¶!%+¶&¬    1   
+    ö  ÷ 2       
+ 8 9     
+,- ./  )   %     *´ G°    1       2 2     01  )   %     *´ ]°    1       / 2     23  )   %     *´ »¬    1       % 2     4 i  )   %     *·5±    1       › 2     71  )   %     *´ U°    1       0 2      8   9:   :  ç;	<>@	 +AC@ e       n       q       —      
