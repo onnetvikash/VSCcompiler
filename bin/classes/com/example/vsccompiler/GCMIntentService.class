@@ -1,0 +1,97 @@
+Êþº¾   2?  (com/example/vsccompiler/GCMIntentService  +com/google/android/gcm/GCMBaseIntentService endpoint ?Lcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint; PROJECT_NUMBER Ljava/lang/String; 
+ConstantValue  411403195290 register (Landroid/content/Context;)V Code
+    #com/google/android/gcm/GCMRegistrar  
+ checkDevice
+    
+ 
+checkManifest  java/lang/String
+     /(Landroid/content/Context;[Ljava/lang/String;)V LineNumberTable LocalVariableTable mContext Landroid/content/Context; 
+unregister
+  "   
+ <init> ()V
+  & # ' (Ljava/lang/String;)V ) Ecom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint$Builder
+ + - , 9com/google/api/client/extensions/android/http/AndroidHttp . / newCompatibleTransport ,()Lcom/google/api/client/http/HttpTransport; 1 1com/google/api/client/json/jackson/JacksonFactory
+ 0 3 # $ 5 *com/example/vsccompiler/GCMIntentService$1
+ 4 7 # 8 -(Lcom/example/vsccompiler/GCMIntentService;)V
+ ( : # ; ˆ(Lcom/google/api/client/http/HttpTransport;Lcom/google/api/client/json/JsonFactory;Lcom/google/api/client/http/HttpRequestInitializer;)V
+ = ? > *com/example/vsccompiler/CloudEndpointUtils @ A 
+updateBuilder ’(Lcom/google/api/client/googleapis/services/AbstractGoogleClient$Builder;)Lcom/google/api/client/googleapis/services/AbstractGoogleClient$Builder;
+ ( C D E build A()Lcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint;	  G   this *Lcom/example/vsccompiler/GCMIntentService; endpointBuilder GLcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint$Builder; onError .(Landroid/content/Context;Ljava/lang/String;)V O java/lang/StringBuilder Q sRegistration with Google Cloud Messaging...FAILED!
+
+A Google Cloud Messaging registration error occurred (errorid: 
+ N &
+ N T U V append -(Ljava/lang/String;)Ljava/lang/StringBuilder; X ).  Z !Do you have your project number ( \  
+  ^ _ ` equals (Ljava/lang/Object;)Z b <unset> d I)  set correctly, and do you have Google Cloud Messaging enabled for the  f project?
+ N h i j toString ()Ljava/lang/String;
+  l m n sendNotificationIntent 0(Landroid/content/Context;Ljava/lang/String;ZZ)V context errorId 
+StackMapTable s android/content/Context 	onMessage 4(Landroid/content/Context;Landroid/content/Intent;)V w .Message received via Google Cloud Messaging:
+
+ y message
+ { } | android/content/Intent ~  getStringExtra &(Ljava/lang/String;)Ljava/lang/String; intent Landroid/content/Intent; onRegistered
+ „ † … =com/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint ‡ ˆ 
+getDeviceInfo a(Ljava/lang/String;)Lcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint$GetDeviceInfo;
+ Š Œ ‹ Kcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint$GetDeviceInfo  Ž execute ()Ljava/lang/Object;  ;com/example/vsccompiler/deviceinfoendpoint/model/DeviceInfo
+  ’ “ j getDeviceRegistrationID
+  3
+  – — ˜ setDeviceRegistrationID Q(Ljava/lang/String;)Lcom/example/vsccompiler/deviceinfoendpoint/model/DeviceInfo;
+ š œ › java/lang/System  ž currentTimeMillis ()J
+   ¢ ¡ java/lang/Long £ ¤ valueOf (J)Ljava/lang/Long;
+  ¦ § ¨ setTimestamp O(Ljava/lang/Long;)Lcom/example/vsccompiler/deviceinfoendpoint/model/DeviceInfo;	 ª ¬ « android/os/Build ­  MANUFACTURER
+  ¯ £ ° &(Ljava/lang/Object;)Ljava/lang/String; ²  	 ª ´ µ  PRODUCT · UTF-8
+ ¹ » º java/net/URLEncoder ¼ ½ encode 8(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  ¿ À ˜ setDeviceInformation
+ „ Â Ã Ä insertDeviceInfo (Lcom/example/vsccompiler/deviceinfoendpoint/model/DeviceInfo;)Lcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint$InsertDeviceInfo;
+ Æ Œ Ç Ncom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint$InsertDeviceInfo
+ É Ë Ê java/lang/Class Ì j getName Î >Exception received when attempting to register with server at 
+ „ Ð Ñ j 
+getRootUrl
+ Ó Õ Ô android/util/Log Ö × e <(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I Ù ¶1) Registration with Google Cloud Messaging...SUCCEEDED!
+
+2) Registration with Endpoints Server...FAILED!
+
+Unable to register your device with your Cloud Endpoints server running at  Û G. Either your Cloud Endpoints server is not deployed to App Engine, or  Ý Ayour settings need to be changed to run against a local instance  ß Bby setting LOCAL_ANDROID_RUN to 'true' in CloudEndpointUtils.java. á ª1) Registration with Google Cloud Messaging...SUCCEEDED!
+
+2) Registration with Endpoints Server...SUCCEEDED!
+
+Device registration with Cloud Endpoints Server running at   ã 
+ succeeded!
+
+ å "To send a message to this device,  ç <open your browser and navigate to the sample application at 
+  é ê  getWebSampleUrl ì java/io/IOException registration #alreadyRegisteredWithEndpointServer Z existingInfo =Lcom/example/vsccompiler/deviceinfoendpoint/model/DeviceInfo; 
+deviceInfo Ljava/io/IOException; onUnregistered
+  ö ÷ ø length ()I
+ „ ú û ü removeDeviceInfo d(Ljava/lang/String;)Lcom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint$RemoveDeviceInfo;
+ þ Œ ÿ Ncom/example/vsccompiler/deviceinfoendpoint/Deviceinfoendpoint$RemoveDeviceInfo @Exception received when attempting to unregister with server at  È1) De-registration with Google Cloud Messaging....SUCCEEDED!
+
+2) De-registration with Endpoints Server...FAILED!
+
+We were unable to de-register your device from your Cloud Endpoints server running at  . *See your Android log for more information.	 ´1) De-registration with Google Cloud Messaging....SUCCEEDED!
+
+2) De-registration with Endpoints Server...SUCCEEDED!
+
+Device de-registration with Cloud Endpoints server running at    succeeded! registrationId (com/example/vsccompiler/RegisterActivity
+ { # -(Landroid/content/Context;Ljava/lang/Class;)V gcmIntentServiceMessage
+ { putExtra -(Ljava/lang/String;Z)Landroid/content/Intent; registrationMessage error
+ { >(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;   
+ {!"# addFlags (I)Landroid/content/Intent;
+ %&' 
+startActivity (Landroid/content/Intent;)V isError isRegistrationMessage notificationIntent, 	/_ah/api/. /index.html
+ 012 replace D(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String; endpointUrl 
+SourceFile GCMIntentService.java InnerClasses Builder 
+GetDeviceInfo InsertDeviceInfo RemoveDeviceInfo< Fcom/google/api/client/googleapis/services/AbstractGoogleClient$Builder> >com/google/api/client/googleapis/services/AbstractGoogleClient !               	    
+ 	 	  
+     L     *¸ *¸ *½ Y
+S¸ ±           8  9  :  ;             	   
+     3     *¸ !±       
+    D  E              # $     {     /*
+· %» (Y¸ *» 0Y· 2» 4Y*· 6· 9L*+¸ <À (¶ Bµ F±           H  I 
+ J  K  I   O . P        / H I      J K   L M     ó     @*+» NYP· R,¶ SW¶ SY¶ S[
+¶ ]™ a§ 
+¶ Sc¶ Se¶ S¶ g· k±       >    ^  _  `  b  c  d  e ( f * e - g 2 h 7 ` : h < ^ ? i         @ H I     @ o     @ p   q   7 ÿ (   r    r Nÿ    r    r N   t u     w     *+» NYv· R,x¶ z¶ S¶ g· k±       "    p  q  r  s  r  s  p  t          H I      o      €    ‚ M    j    >*´ F,¶ ƒ¶ ‰À :Æ ,¶ ‘¶ ]™ 
+>§ :š œ» Y· ”:*´ F,¶ •¸ ™¸ Ÿ¶ ¥» NY² ©¸ ®· R±¶ S² ³¶ S¶ g¶¸ ¸¶ ¾¶ Á¶ ÅW§ S:¶ È» NYÍ· R*´ F¶ Ï¶ S¶ g¸ ÒW*+» NYØ· R*´ F¶ Ï¶ SÚ¶ SÜ¶ SÞ¶ S¶ g· k±*+» NYà· R*´ F¶ Ï¶ Sâ¶ Sä¶ Sæ¶ S**´ F¶ Ï· è¶ S¶ g· k±   % ( ë * t w ë     Ò 4     ‡ 
+ ˆ  ‡  Š # ‹ %  * ’ . ™ 7 š ; › = œ A  J   W ¡ \ ¢ b   e £ g   j ž m š p £ t ¥ y ¦ ~ § ‡ ¨ ‘ § ” ¨ – ¦ š ª › « œ ¬ ¥ ¯ ¯ ° ´ ± ¹ ² ¾ ¬ Á ³ Ã ª Æ ´ Ç · È ¸ É ¹ Ò ¼ Ü ½ á ¾ æ ¿ ë À ù ¹ ü À þ · Á    H    H I     o     í     î ï    ð ñ  7 = ò ñ  y N Ö ó  q     ÿ (   r   ë÷ L ëû O  ô M    O     Œ,Æ f,¶ õž _*´ F,¶ ù¶ ýW§ PN¶ È» NY · R*´ F¶ Ï¶ S¶ g-¸ ÒW*+» NY· R*´ F¶ Ï¶ S¶ S¶ S¶ g· k±*+» NY· R*´ F¶ Ï¶ S
+¶ S¶ g· k±     ë     j    Í  Ð  Ñ  Ò   Ó * Ô 4 Ó 7 Ô 8 Ò < Õ = Ö > × H Û X Ü ^ × a Ý c Õ f Þ g â h ã i ä s ç ƒ ä † ç ˆ â ‹ è    *    Œ H I     Œ o     Œ    L Ö ó  q   	 Z ëû L  m n     Å     E» {Y+
+·:¶W¶W¶Wx,¶W¶ W*¶$±       * 
+   þ 
+ ÿ      " , 5 > D    >    E H I     E o     E y     E( ï    E) ï  
+ 8*    ê      ?     ++-¶/°                   H I     3   4   56   2  4       ( „7  Š „8  Æ „9  þ „: ;=7	
