@@ -1,0 +1,35 @@
+Êþº¾   2     grammar/test_grammarParser$DFA64  org/antlr/runtime/DFA this$0 Lgrammar/test_grammarParser; <init> A(Lgrammar/test_grammarParser;Lorg/antlr/runtime/BaseRecognizer;)V Code	    
+  
+   ()V	     
+recognizer "Lorg/antlr/runtime/BaseRecognizer;	     decisionNumber I	    grammar/test_grammarParser   	DFA64_eot [S	     eot	  ! "  	DFA64_eof	  $ %  eof	  ' ( ) 	DFA64_min [C	  + , ) min	  . / ) 	DFA64_max	  1 2 ) max	  4 5  DFA64_accept	  7 8  accept	  : ;  
+DFA64_special	  = >  special	  @ A B DFA64_transition [[S	  D E B 
+transition LineNumberTable LocalVariableTable this "Lgrammar/test_grammarParser$DFA64; getDescription ()Ljava/lang/String; M '()* loopback of 445:8: ( declaration )* specialStateTransition !(ILorg/antlr/runtime/IntStream;)I 
+Exceptions R &org/antlr/runtime/NoViableAltException T org/antlr/runtime/TokenStream S V W X LA (I)I S Z [ \ index ()I S ^ _  rewind
+  a b c synpred136_test_grammar ()Z S e f g LT (I)Lorg/antlr/runtime/Token; i k j org/antlr/runtime/Token l K getText
+  n o p 
+isTypeName (Ljava/lang/String;)Z S r s t seek (I)V
+  v w x access$0 G(Lgrammar/test_grammarParser;)Lorg/antlr/runtime/RecognizerSharedState;	 z | { 'org/antlr/runtime/RecognizerSharedState }  backtracking	 z  €  failed Z
+  ƒ J K
+ Q …  † 4(Ljava/lang/String;IILorg/antlr/runtime/IntStream;)V
+  ˆ ‰ Š error +(Lorg/antlr/runtime/NoViableAltException;)V s _input Lorg/antlr/runtime/IntStream; input Lorg/antlr/runtime/TokenStream; _s LA64_38 
+index64_38 LA64_44 
+index64_44 LA64_59 
+index64_59 nvae (Lorg/antlr/runtime/NoViableAltException; 
+StackMapTable › org/antlr/runtime/IntStream 
+SourceFile test_grammarParser.java InnerClasses DFA64 !               	   ¢     F*+µ 
+*· *,µ *@µ *² µ *²  µ #*² &µ **² -µ 0*² 3µ 6*² 9µ <*² ?µ C±    F   .    § 	 ¨  ©  ª  « " ¬ ) ­ 0 ® 7 ¯ > ° E ± G       F H I     F     J K  	   -     L°    F       ´ G        H I    N O  P     Q 	  Ç    F,À SN6ª                 j   ¹-¹ U 6-¹ Y 6-¹ ] <*´ 
+¶ `™ *´ 
+-¹ d ¹ h ¶ m™ 	<§ <-¹ q › £¬-¹ U 6-¹ Y 6-¹ ] <*´ 
+¶ `™ *´ 
+-¹ d ¹ h ¶ m™ 	<§ <-¹ q › T¬-¹ U 6	-¹ Y 6
+-¹ ] <*´ 
+¶ `™ *´ 
+-¹ d ¹ h ¶ m™ 	<§ <-
+¹ q › ¬*´ 
+¸ u´ yž *´ 
+¸ uµ ~¬» QY*¶ ‚@-· „:*¶ ‡¿    F   ‚     ¸  ¹  º $ ¼ - ¾ 5 ¿ ; À = Á c Â e Ä m Å s É | Ë „ Ì Š Í Œ Î ² Ï ´ Ñ ¼ Ò Â Ö Ë Ø Ó Ù Ù Ú Û Û Ü Þ ß â+ ä; ã= åC æ G   z   F H I    F ‹    F Œ   A Ž   >    - F ‘   5 > ’   | F “   „ > ”   Ë F •  	 Ó > –  
+= 	 — ˜  ™   g ý $ Sý >ù 
+ÿ > 	  š S    ÿ 
+   š S  ÿ >   š S      ÿ 
+   š S    œ     ž   
+    Ÿ 
