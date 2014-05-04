@@ -1,0 +1,22 @@
+Êþº¾   2 /  Icom/example/vsccompiler/messageEndpoint/MessageEndpointRequestInitializer  Wcom/google/api/client/googleapis/services/json/CommonGoogleJsonClientRequestInitializer <init> ()V Code
+  	   LineNumberTable LocalVariableTable this KLcom/example/vsccompiler/messageEndpoint/MessageEndpointRequestInitializer; (Ljava/lang/String;)V
+     key Ljava/lang/String; '(Ljava/lang/String;Ljava/lang/String;)V
+     userIp initializeJsonRequest S(Lcom/google/api/client/googleapis/services/json/AbstractGoogleJsonClientRequest;)V 
+Exceptions  java/io/IOException 	Signature V(Lcom/google/api/client/googleapis/services/json/AbstractGoogleJsonClientRequest<*>;)V
+     ! >com/example/vsccompiler/messageEndpoint/MessageEndpointRequest
+  # $ %  initializeMessageEndpointRequest C(Lcom/example/vsccompiler/messageEndpoint/MessageEndpointRequest;)V request PLcom/google/api/client/googleapis/services/json/AbstractGoogleJsonClientRequest; LocalVariableTypeTable SLcom/google/api/client/googleapis/services/json/AbstractGoogleJsonClientRequest<*>; F(Lcom/example/vsccompiler/messageEndpoint/MessageEndpointRequest<*>;)V @Lcom/example/vsccompiler/messageEndpoint/MessageEndpointRequest; CLcom/example/vsccompiler/messageEndpoint/MessageEndpointRequest<*>; 
+SourceFile &MessageEndpointRequestInitializer.java !               3     *· ±    
+   
+    U  V          
+          >     *+· ±    
+   
+    \  ]          
+                I     *+,· ±    
+   
+    d  e           
+                                 \     *+· *+À  ¶ "±    
+       i  j 
+ k          
+      & '  (        & )   $ %            *    G      ±    
+       x          
+      & +  (        & ,   -    .
